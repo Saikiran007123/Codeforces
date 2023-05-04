@@ -1,21 +1,38 @@
 #include<iostream>
 #include<bits/stdc++.h>
 # define mod 1000000007
+#define endl '\n'
+#define FASTIO ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 #define  int long long
 using namespace std;
+void solve(){
+       string a; cin>>a;
+       string b="";
+       int len = a.size()-1;
+       int i=0;
+        while(i<=len){
+         if(a[i]=='-' && a[i+1]=='-'){
+               b=b+"2";
+               i+=2;
+         }
+         if(a[i]=='-' && a[i+1]=='.'){
+            b=b+"1";
+            i+=2;
+         }
+         if(a[i]=='.'){
+            b=b+"0";
+            i++;
+         }
+       }
+         cout<<b<<" ";
+      }
 signed main(){
-        int n; cin>>n;
-        int arr[n];
-        for(int i=0;i<n;i++){
-          cin>>arr[i];
-        }
-        int m=arr[0];
-        for(int i=0;i<n;i++){
-             m=max(m,arr[i]);
-        }
-        int ans=0;
-        for(int i=0;i<n;i++){
-          ans=ans+(m-arr[i]);
-        }
-        cout<<ans<<" ";
+   ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+   //long long t; cin>>t;
+   ///int k=0;
+   //nt sum1=0,sum2=0,sum3=0;
+   //while(t-->0){
+       solve();
+   
+//}
 }
