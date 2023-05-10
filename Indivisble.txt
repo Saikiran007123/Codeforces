@@ -1,0 +1,68 @@
+#include<iostream>
+#include<bits/stdc++.h>
+#include<cstring>
+# define mod 1000000007
+#define endl '\n'
+#define loop(i,a,b) for(int i = a ; i < b ; i++)
+#define sum(i,a,b) for(int i=a;i<b;i++){sum+=i}
+#define solvet  while(t-->0)
+#define inp cin
+#define out cout
+//#define a[n] arr 
+#define FASTIO ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+//#define  int long long
+using namespace std;
+void solve(){
+            int n;
+            cin>>n;
+            int sum=(n*(n+1))/2;
+            int k=(n-1)+1;
+            if(sum==1){
+               cout<<"1";
+            }
+            else if(sum%k==0){
+               cout<<"-1";
+            }
+            else {
+               vector<int>even;
+               vector<int>odd;
+               for(int i=1;i<=n;i++){
+                  if(i%2==0){
+                     even.push_back(i);
+                  }
+                  else{
+                     odd.push_back(i);
+                  }
+               }
+               int len1=even.size();
+               vector<int>a;
+               
+               for(int i=0;i<len1;i++){
+                   a.push_back(even[i]);
+                   a.push_back(odd[i]);
+               }
+            int len2=a.size();
+            for(int i=0;i<len2;i++){
+               cout<<a[i]<<" ";
+            }
+
+            /*for(int i=0;i<len1;i++){
+              cout<<even[i]<<" ";
+            }
+             for(int i=0;i<len1;i++){
+              cout<<odd[i]<<" ";
+            }*/
+           }
+}
+signed main(){
+   ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+   //long long t; cin>>t;
+   ///int k=0;
+   //nt sum1=0,sum2=0,sum3=0;
+   //while(t-->0){
+   int t; inp>>t;
+   solvet{
+      solve();
+      cout<<endl;
+   }
+}
