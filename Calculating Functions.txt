@@ -1,0 +1,41 @@
+#include<iostream>
+#include<bits/stdc++.h>
+#include<cstring>
+#include <string> 
+# define mod 1000000007
+#define endl '\n'
+#define loop(i,a,b) for(int i = a ; i < b ; i++)
+#define sum(i,a,b) for(int i=a;i<b;i++){sum+=i}
+#define solvet  while(t-->0)
+#define inp cin
+#define out cout
+//#define a[n] arr 
+#define FASTIO ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define  int long long
+using namespace std;
+void solve(){
+          int n; cin>>n;
+          int k=n/2;
+          int res1=(k)*((2*2)+((k-1)*(2)))/2;
+          int res2=(k)*((2*(-1))+((k-1)*(-2)))/2;
+          int ans=(res1)+(res2);
+          if(n%2!=0){
+              ans=ans+((-1)*n);
+              cout<<(ans)<<endl;
+          }     
+          else{
+              cout<<(ans)<<endl;
+          }
+}
+signed main(){
+   ios::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+   //long long t; cin>>t;
+   //int k=0;
+   //nt sum1=0,sum2=0,sum3=0;
+   //while(t-->0){
+   //int t; inp>>t;
+   //solvet{
+       solve();
+   //}
+   //cout<<k<<endl;
+}
