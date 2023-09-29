@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+void solve(){
+	int n1,k;
+	cin>>n1>>k;
+	int count=0;
+	int a[n1];
+	for(int i=0;i<n1;i++){
+		cin>>a[i];
+		if(a[i]==k){
+			count=1;
+		}
+	}
+	if(count==1){
+		cout<<"YES"<<endl;
+	}
+	else{
+		cout<<"NO"<<endl;
+	}
+}
+int main(){
+	int n; cin>>n;
+	while(n>0){
+        solve();
+		n--;
+	}
+}
